@@ -1,0 +1,60 @@
+<Gerenciador>:
+	Acesso:
+		name: 'acesso'
+
+	Menu:
+		name: 'menu'
+
+
+<Acesso>:
+	BoxLayout:
+		orientation: 'vertical'
+		padding: 50
+		spacing: 50
+
+		Label:
+			text: 'Local do arquivo'
+
+		TextInput:
+			id: arquivo
+			multiline: False
+
+		Label:
+			text: 'Senha'
+
+		TextInput:
+			id: senha
+			password: True
+			multiline: False
+			allow_copy: False
+
+		BoxLayout:
+			orientation:'horizontal'
+			padding: 50
+			spacing: 20
+			Button:
+				text: 'Abrir'
+				 
+			Button:
+				text: 'Criar'
+				
+<Menu>
+	BoxLayout:
+		orientation:'vertical'
+		ScrollView:
+			BoxLayout:
+				orientation: 'vertical'
+				height: self.minimum_height
+
+
+<Segredo>
+	BoxLayout:
+		orientation: 'vertical'
+		width: 150
+		Label:
+			id: index
+		Label:
+			id: application
+	Button:
+		text: 'Editar'
+		on_release: 
